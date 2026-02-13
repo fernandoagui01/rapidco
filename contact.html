@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - RapidCo HVAC</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="utility-bar">
+        <div class="container utility-flex">
+            <div class="utility-left">
+                <a href="https://rapid-revive.com" target="_blank" rel="noopener noreferrer">Rapid Revive <i class="fas fa-external-link-square-alt"></i></a>
+            </div>
+            <div class="utility-right">
+                <a href="resources.html">Owner Resources</a>
+                <a href="contact.html" style="color: var(--rapid-blue); font-weight: bold;">Contact Us</a>
+            </div>
+        </div>
+    </div>
+
+    <header class="main-header">
+        <div class="container nav-flex">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none;">
+                    <span class="logo-blue" style="text-transform: uppercase;">RapidCo</span>
+                </a>
+            </div>
+            
+            <div class="mobile-menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <nav class="main-nav nav-links">
+                <ul>
+                    <li><a href="systems.html">Systems</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html" aria-current="page">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container text-center">
+                <h1>Contact RapidCo</h1>
+                <p>We're here to help with all your heating, cooling, and air quality needs.</p>
+            </div>
+        </section>
+
+        <section class="container" style="margin-bottom: 80px;">
+            <div class="contact-grid">
+                
+                <div class="contact-info scroll-fade">
+                    <h2>Get In Touch</h2>
+                    <p style="color: #555; margin-bottom: 30px;">Need immediate assistance or emergency repairs? Give us a call. Prefer to write? Fill out the form and our team will reach out to you shortly.</p>
+
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
+                        <div class="info-text-block">
+                            <h3>Call Us Directly</h3>
+                            <a href="tel:+19514875221" class="contact-link">(951) 487-5221</a>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="info-text-block">
+                            <h3>Email Support</h3>
+                            <a href="mailto:rapidcocorp@gmail.com" class="contact-link">rapidcocorp@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fas fa-clock"></i></div>
+                        <div class="info-text-block">
+                            <h3>Business Hours</h3>
+                            <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
+                            <p style="color: #d9534f; font-weight: bold; margin-top: 5px;">24/7 Emergency Service Available</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper scroll-fade">
+                    <form id="quoteForm" class="styled-form" action="https://formspree.io/f/mwvnlrjo" method="POST">
+                        <h2 style="margin-bottom: 20px; color: var(--carrier-navy);">Send a Message</h2>
+                        
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" placeholder="Jane Doe" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="text" id="phone" name="phone" placeholder="(123) 456-7890" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">How can we help?</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Briefly describe your issue or question..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-blue" style="width: 100%; border: none; cursor: pointer; padding: 15px; font-size: 1.1rem;">Submit Request</button>
+                        <div id="formFeedback"></div>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+
+<footer class="main-footer">
+        <div class="container footer-grid">
+            
+            <div class="footer-col">
+                <div class="logo" style="margin-bottom: 20px;">
+                    <span class="logo-blue" style="text-transform: uppercase; color: var(--white); font-size: 1.5rem;">RapidCo</span>
+                </div>
+                <p style="color: #cbd5e0; font-size: 0.95rem; line-height: 1.6;">
+                    Rooted in quality and over 30 years of experience, we provide comfort and peace of mind through expert HVAC installation and maintenance.
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <h4 style="color: var(--white); margin-bottom: 20px; font-size: 1.1rem;">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="systems.html">HVAC Systems</a></li>
+                    <li><a href="services.html">Installation & Maintenance</a></li>
+                    <li><a href="about.html">About Our Experience</a></li>
+                    <li><a href="resources.html">Owner Resources</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 style="color: var(--white); margin-bottom: 20px; font-size: 1.1rem;">Get In Touch</h4>
+                <ul class="footer-contact">
+                    <li><i class="fas fa-phone-alt"></i> (951) 487-5221</li>
+                    <li><i class="fas fa-envelope"></i> rapidcocorp@gmail.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Southern California</li>
+                    <li><i class="fas fa-clock"></i> Mon - Fri: 8am - 6pm</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-flex">
+                <p>&copy; 2026 RapidCo HVAC. All Rights Reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</html>
