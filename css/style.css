@@ -925,18 +925,23 @@ img {
 /* Mobile Devices */
 @media (max-width: 768px) {
     /* Header Adjustments */
-    .utility-flex, .nav-flex {
+    .utility-flex {
         flex-direction: column;
         text-align: center;
-        gap: 15px;
+        gap: 10px;
     }
     
     .nav-flex {
+        flex-direction: row; /* Keeps them on the same line */
+        justify-content: space-between; /* Spreads them apart */
+        align-items: center;
         position: relative;
+        width: 100%;
     }
     
     .mobile-menu-toggle {
         display: block;
+        margin-left: auto; /* Forces the icon all the way to the right edge */
     }
     
     .main-nav ul {
