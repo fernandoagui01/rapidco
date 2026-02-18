@@ -133,4 +133,71 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+    // ====================================================
+    // 6. Chatbot Logic
+    // ====================================================
+    const chatBox = document.getElementById("chat-box");
+    const userInput = document.getElementById("user-input");
+    const sendButton = document.getElementById("send-btn");
+    const chatContainer = document.getElementById("chat-container");
+    const chatLauncher = document.getElementById("chat-launcher");
+    const chatCloseBtn = document.getElementById("chat-close-btn");
+
+    // Toggle chat open/closed
+    if (chatLauncher && chatContainer) {
+        chatLauncher.addEventListener("click", () => {
+            chatContainer.classList.add("chat-open");
+            userInput.focus();
+        });
+    }
+
+    if (chatCloseBtn && chatContainer) {
+        chatCloseBtn.addEventListener("click", () => {
+            chatContainer.classList.remove("chat-open");
+        });
+    }
+
+    // Helper function to handle the logic
+    async function runChat() {
+        const text = userInput.value.trim();
+        if (!text) return;
+
+        // 1. Display user message
+        chatBox.innerHTML += `<div class="user-msg">${text}</div>`;
+        userInput.value = "";
+        chatBox.scrollTop = chatBox.scrollHeight;
+
+        // 2. Show loading
+        const loadingId = "loading-" + Date.now();
+        chatBox.innerHTML += `<div class="bot-msg" id="${loadingId}">Typing...</div>`;
+        chatBox.scrollTop = chatBox.scrollHeight;
+
+        try {
+            // 3. Send to backend
+            const response = await fetch("https://rapidcochatbot.onrender.com/chat", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ message: text })
+            });
+
+            const data = await response.json();
+
+            // 4. Show response
+            document.getElementById(loadingId).remove();
+            chatBox.innerHTML += `<div class="bot-msg">${data.reply}</div>`;
+
+        } catch (error) {
+            document.getElementById(loadingId).remove();
+            chatBox.innerHTML += `<div class="bot-msg" style="color: red;">Error connecting to server.</div>`;
+        }
+        chatBox.scrollTop = chatBox.scrollHeight;
+    }
+
+    // Attach events to send button and Enter key
+    if (sendButton && userInput) {
+        sendButton.addEventListener("click", runChat);
+        userInput.addEventListener("keypress", (event) => {
+            if (event.key === "Enter") runChat();
+        });
+    }
 });

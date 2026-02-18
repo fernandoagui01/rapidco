@@ -63,7 +63,7 @@
                         <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
                         <div class="info-text-block">
                             <h3>Call Us Directly</h3>
-                            <a href="tel:+19515502908" class="contact-link">(951) 550-2908</a>
+                            <a href="tel:+19514875221" class="contact-link">(951) 487-5221</a>
                         </div>
                     </div>
 
@@ -118,6 +118,38 @@
         </section>
     </main>
 
+    <!-- Chat Launcher Button -->
+    <button id="chat-launcher" aria-label="Chat with Pablo">
+        <i class="fas fa-comment-dots"></i>
+    </button>
+
+    <!-- Chat Panel -->
+    <div id="chat-container" role="dialog" aria-label="Chat with Pablo">
+        <div id="chat-header">
+            <div id="chat-header-avatar">
+                <i class="fas fa-headset"></i>
+            </div>
+            <div id="chat-header-info">
+                <div id="chat-header-name">Pablo</div>
+                <div id="chat-header-status">RapidCo Virtual Assistant</div>
+            </div>
+            <button id="chat-close-btn" aria-label="Close chat">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <div id="chat-box">
+            <div class="bot-msg">Hi there! 👋 I'm Pablo, RapidCo's virtual assistant. How can I help you today?</div>
+        </div>
+
+        <div id="input-area">
+            <input type="text" id="user-input" placeholder="Ask me anything..." autocomplete="off">
+            <button id="send-btn" aria-label="Send message">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
     <script src="js/script.js"></script>
 </body>
 
@@ -166,5 +198,4 @@
             </div>
         </div>
     </footer>
-
 </html>
